@@ -24,6 +24,47 @@ OpenAI tabanlı güçlü bir LLM (Large Language Model) kullanarak, kullanıcıl
 ```bash
 git clone https://github.com/ibrahimdiken/legalmind-ai.git
 cd legalmind-ai
-
+```
 ---
 ### 2. Virtual environment oluştur ve aktif et
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+---
+
+### 3. Gerekli bağımlılıkları yükle
+```bash
+pip install -r requirements.txt
+```
+
+
+### 4. .env dosyasını oluştur
+Ana dizine .env adlı bir dosya oluşturun ve içine OpenAI API anahtarınızı girin:
+
+```bash
+OPENAI_API_KEY=sk-xxx
+
+```
+### 🧪 Uygulamayı Çalıştır
+
+```bash
+python3 run.py
+
+```
+Tarayıcıdan aç: http://localhost:5500
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
