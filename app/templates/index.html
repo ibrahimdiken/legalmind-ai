@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>LegalMindAI – Hukuki Danışman</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>⚖️ LegalMindAI</h1>
+    <p class="subtitle">Yapay Zeka Destekli Hukuki Danışman</p>
+
+    <form id="mcpForm" method="POST">
+      <label for="user_id">Kullanıcı ID:</label>
+      <input type="text" id="user_id" name="user_id" value="{{ user_id or '' }}" placeholder="ID girin..." required>
+
+      <label for="context">Bağlam:</label>
+      <input type="text" id="context" name="context" value="{{ context or '' }}" placeholder="Bağlam girin..." required>
+
+      <label for="prompt">Soru:</label>
+      <textarea id="prompt" name="prompt" placeholder="Hukuki sorunuzu buraya yazın..." required>{{ prompt or '' }}</textarea>
+
+      <button type="submit">Danış</button>
+    </form>
+
+    {% if answer %}
+      <div class="response">
+        <h2>📢 Cevap:</h2>
+        <pre>{{ answer }}</pre>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

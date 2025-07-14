@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Geçmiş Sorgular</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🕘 MCP Geçmiş Sorgular</h1>
+    <!-- Filtre Formu -->
+    <form method="GET" action="{{ url_for('main.view_history') }}" class="filter-form">
+      <div class="filter-group">
+        <label for="context_filter">Context Filtrele:</label>
+        <input type="text" id="context_filter" name="context" value="{{ request.args.get('context', '') }}" placeholder="Bağlam ara...">
+      </div>
+      <div class="filter-group">
+        <label for="start_date">Başlangıç Tarihi:</label>
+        <input type="date" id="start_date" name="start_date" value="{{ request.args.get('start_date', '') }}">
+      </div>
+      <div class="filter-group">
+        <label for="end_date">Bitiş Tarihi:</label>
+        <input type="date" id="end_date" name="end_date" value="{{ request.args.get('end_date', '') }}">
+      </div>
+      <button type="submit">Filtrele</button>
+    </form>
+
+    <table class="history">
+      <thead>
+        <tr>
+          <th>Zaman</th>
+          <th>Kullanıcı</th>
+          <th>Bağlam</th>
+          <th>Prompt</th>
+          <th>Cevap</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for e in entries %}
+        <tr>
+          <td>{{ e.timestamp }}</td>
+          <td>{{ e.user_id }}</td>
+          <td>{{ e.context }}</td>
+          <td>{{ e.prompt }}</td>
+          <td><pre>{{ e.answer }}</pre></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

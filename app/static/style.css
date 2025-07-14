@@ -1,0 +1,115 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Ana Konteyner */
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Başlıklar */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Elemanları */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+button {
+  align-self: flex-start;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #34495e;
+}
+
+/* Cevap Kutusu */
+.response {
+  margin-top: 30px;
+  background-color: #ecf0f1;
+  border-left: 4px solid #2c3e50;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.response h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.response pre {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Geçmiş Sorgular Tablosu */
+table.history {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+table.history th,
+table.history td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.history th {
+  background-color: #f3f3f3;
+}
+
+table.history pre {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
