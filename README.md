@@ -25,8 +25,5 @@ OpenAI tabanlı güçlü bir LLM (Large Language Model) kullanarak, kullanıcıl
 git clone https://github.com/ibrahimdiken/legalmind-ai.git
 cd legalmind-ai
 
-
+---
 ### 2. Virtual environment oluştur ve aktif et
-```bash
-python3 -m venv venv
-source venv/bin/activate
