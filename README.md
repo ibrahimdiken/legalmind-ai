@@ -55,16 +55,28 @@ python3 run.py
 Tarayıcıdan aç: http://localhost:5500
 
 
+### 🔌 MCP API Kullanımı
+Endpoint:
+```
+POST http://localhost:5500/mcp
+```
+Örnek cURL isteği:
+```bash
+curl -X POST http://localhost:5500/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user_id": "kullanici_123",
+    "context": "Boşanma hukuku hakkında danışma",
+    "prompt": "Boşanma davası nasıl açılır?"
+  }'
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
+### 📁 Loglara Erişim
+Tüm geçmiş MCP sorguları şu dosyada tutulur:
+```
+logs/mcp_history.json
+```
+İndirmek istersen:
+```
+GET http://localhost:5500/download_logs
+```
